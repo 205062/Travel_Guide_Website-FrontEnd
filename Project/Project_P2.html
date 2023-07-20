@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Project_P2</title>
+
+    <style>
+        body {
+            /* background-image: url(https://i.pinimg.com/originals/75/f1/f9/75f1f9e14d2a7bae1d061c95ea26c878.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%; */
+            padding: 20px;
+            margin: 0;
+            box-sizing: border-box;
+            color:rgb(0, 0, 0);
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .slideshow-container {
+            width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        .numbertext {
+            color: white;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+        td,
+        tr {
+            text-align: center;
+
+        }
+
+        li {
+            padding: 15px
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="font-size: 100px;text-align: center;">NewYork</h1>
+    <div style="width: 100%;height: 620px;">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 5</div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu_%28cropped%29.jpg/1200px-View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu_%28cropped%29.jpg"
+                    style="width:100%;">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 5</div>
+                <img src="https://img.nzz.ch/2022/04/13/b0b34ff3-3f0e-44ac-9506-376f73a76b0d.jpeg?width=560&fit=crop&quality=75&auto=webp&crop=7651,4304,x0,y81"
+                    style="width: 100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 5</div>
+                <img src="https://media.architecturaldigest.com/photos/63a08c24b6c345d78d0f35e4/2:1/w_3000,h_1500,c_limit/GettyImages-1303351707.jpg"
+                    style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 5</div>
+                <img src="https://www.wallpapertip.com/wmimgs/57-570190_world-winter-snow-new-york-city-new-york.jpg"
+                    style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <img src="https://rare-gallery.com/uploads/posts/565664-new-york.jpg" style="width:100%">
+            </div>
+        </div>
+
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <script>
+            let slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                setTimeout(showSlides, 3000);
+            }
+        </script>
+    </div>
+    <div style="width: 100%;font-size: 25px;text-align: center;">
+        <p>
+            New York City is a vibrant and bustling metropolis that is known as the "city that never sleeps". <br>With
+            its iconic skyline, world-famous attractions, and diverse cultures, it is a must-visit destination for
+            travelers from all around the world.
+
+            One of the most popular attractions in New York is the Statue of Liberty, a symbol of freedom and democracy
+            that welcomes visitors to the city. The Empire State Building, Times Square, Central Park, and the
+            Metropolitan Museum of Art are also among the top attractions that visitors flock to see.
+
+            New York is a melting pot of cultures, offering a variety of culinary experiences that are sure to tantalize
+            your taste buds. From the street food vendors to the Michelin-starred restaurants, the city's dining scene
+            is diverse and delicious.
+
+            For shoppers, New York is a paradise with its numerous shopping districts and department stores. You can
+            shop till you drop at Fifth Avenue, SoHo, or the famous Macy's department store.
+
+            The city also has a thriving arts and entertainment scene, with Broadway shows, live music, and museums that
+            cater to all interests. From the classic to the contemporary, New York has something for everyone.
+
+            At night, the city comes alive with its trendy bars and nightclubs, where you can dance the night away with
+            locals and tourists alike.
+
+            New York is truly a city that never sleeps, offering endless opportunities for adventure and exploration.
+            Contact us to start planning your New York City adventure today!
+            <br><br><br>
+        </p>
+    </div>
+    <div style="padding: 20px;width: 100%;font-size: 20px;text-align: center;">
+        <p style="font-size: 50px;">Some of most popular places in NewYork<br></p>
+        <table>
+            <tr>
+                <td style="padding-left: 20px;padding-top: 20px;padding-right: 20px;"><img
+                        src="https://www.kitano.com/resourcefiles/snippet-main-img/new-york-central-park-top.jpg?version=7152022083758"
+                        width="300px" height="300px"></td>
+                <td style="padding-left: 20px;padding-top: 20px;padding-right: 20px;"><img
+                        src="https://cdn-imgix.headout.com/blog-content/image/a3d515edc02dbf92592b5258e20e66fb-tania-fernandez-vdjLv8Gwo0g-unsplash%20(1).jpg?auto=compress&fm=webp&w=1200&h=650&crop=faces&fit=min"
+                        width="300px" height="300px"></td>
+                <td style="padding-left: 20px;padding-top: 20px;padding-right: 20px;"><img
+                        src="https://cdn.sanity.io/images/cctd4ker/production/73a42b4ea1644b2085acaad2896bfa4699687664-2320x920.jpg?rect=405,0,1490,920&w=3840&q=75&fit=clip&auto=format"
+                        width="300px" height="300px"></td>
+                <td style="padding-left: 20px;padding-top: 20px;padding-right: 20px;"><img
+                        src="https://marvel-b1-cdn.bc0a.com/f00000000179470/www.esbnyc.com/sites/default/files/styles/small_feature/public/2019-10/home_banner-min.jpg?itok=uZt-03Vw"
+                        width="300px" height="300px"></td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Central Park</p>
+                </td>
+                <td>
+                    <p>Statue of Liberty</p>
+                </td>
+                <td>
+                    <p>The Metropolitan Museum of Art</p>
+                </td>
+                <td>
+                    <p>Empire State Building</p>
+                </td>
+            </tr>
+
+        </table>
+        <br><br>
+        <table>
+            <tr>
+                <td style="padding-left: 20px;padding-top: 20px;padding-right: 20px;width: 300px;height: 300px;"></td>
+                <td style="padding-left: 20px;padding-top: 20px;padding-right: 20px;"><img
+                        src="https://www.nycgo.com/images/venues/158/brooklyn-bridge-photo-julienne-schaer-nyc-and-company-003-2__large.jpg"
+                        width="300px" height="300px"></td>
+                <td style="padding-left: 20px;padding-top: 20px;padding-right: 20px;"><img
+                        src="https://www.exp1.com/blog/wp-content/uploads/sites/7/2020/06/Times-Square-1-1.jpg"
+                        width="300px" height="300px"></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <p>Brooklyn Bridge</p>
+                </td>
+                <td>
+                    <p>Times Square</p>
+                </td>
+
+            </tr>
+
+        </table>
+    </div>
+    <div style="font-size: 25px;height: 500px; background-color:rgb(197, 192, 187);width: 1200px;margin-left: 100px;">
+        <p style="font-size: 50px;margin-left: 40px;"><br>Places you can stay..</p>
+        <div style="float: left;padding-left: 40px;padding-right: 40px;">
+            <ul>
+                <li>Motto by Hilton New York City Chelsea</li>
+                <li>Margaritaville Resort Times Square<a href="file:///C:/Users/hp/Desktop/Project/Project/Project_P4.html">...</a></li>
+                <li>Hotel Riu Plaza Manhattan Times Square</li>
+                <li>Hard Rock Hotel New York</li>
+
+            </ul>
+        </div>
+        <div style="float: left;padding-left: 40px;">
+            <ul>
+                <li>Arlo Midtown</li>
+                <li>Arlo SoHo</li>
+                <li>Moxy NYC Times Square</li>
+
+            </ul>
+        </div>
+
+    </div>
+
+    <div style="font-size: 20px;padding: 50px;">
+        <p style="font-size: 45px;">Certainly, here are some tips for traveling to New York:</p>
+        <ul>
+            <li>Plan ahead: New York is a large city with a lot to see and do. Plan your trip in advance to make the
+                most of
+                your time there. Research the attractions and activities that interest you and plan out your itinerary
+                accordingly.</li>
+
+            <li>Choose the right time to travel: New York can be visited year-round, but different seasons can offer
+                different
+                experiences. If you're looking to experience the holiday season in the city, consider traveling in
+                November or
+                December. If you're looking to avoid crowds and enjoy milder weather, consider visiting in the spring or
+                fall.</li>
+
+            <li>Book accommodation in advance: New York is a popular tourist destination, and hotels and other
+                accommodations
+                can fill up quickly. Book your accommodation in advance to avoid disappointment.</li>
+
+            <li>Use public transportation: New York has an extensive public transportation system that includes buses,
+                subways,
+                and trains. Using public transportation can be an affordable and efficient way to get around the city.
+            </li>
+
+            <li>Get a New York CityPASS: If you plan on visiting multiple attractions in New York, consider getting a
+                New York
+                CityPASS. This pass offers discounted admission to some of the city's top attractions and can help you
+                save
+                money.</li>
+
+            <li>Be prepared for the weather: New York can experience extreme weather conditions, especially in the
+                winter and
+                summer months. Check the weather forecast before you travel and pack appropriate clothing and
+                accessories.</li>
+
+            <li>Be aware of your surroundings: New York is a bustling city with a lot of people and activity. Be aware
+                of your
+                surroundings and keep an eye on your belongings to avoid theft or other incidents.</li>
+
+            <li>Explore beyond Manhattan: While Manhattan is the most well-known area of New York, there are many other
+                neighborhoods and boroughs worth exploring. Consider taking a trip to Brooklyn, Queens, or the Bronx to
+                experience different parts of the city.</li>
+
+            <li>Try the local cuisine: New York is known for its diverse food scene, from pizza and bagels to ethnic
+                cuisine
+                from around the world. Try some of the local specialties and explore different neighborhoods to discover
+                new
+                food experiences.</li>
+
+            <li>Enjoy the city's cultural offerings: New York is home to world-class museums, theaters, and galleries.
+                Take
+                advantage of the city's cultural offerings and see a show, visit a museum, or attend a concert.</li>
+
+        </ul>
+
+    </div>
+    <p style="font-size: 20px;"><a href="file:///C:/Users/hp/Desktop/Project/Project/Project_P1.html">Go
+            Back to Homepage...</a></p>
+</body>
+
+</html>

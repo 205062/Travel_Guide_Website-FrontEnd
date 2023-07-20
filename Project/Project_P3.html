@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Project_P3</title>
+
+    <style>
+        body {
+            /* background-image: url(https://slidescorner.com/wp-content/uploads/2022/08/03-Arrayanes-Green-Shapes-Background-by-SlidesCorner.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%; */
+            padding: 20px;
+            margin: 0;
+            box-sizing: border-box;
+            color: black;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .slideshow-container {
+            width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        .numbertext {
+            color: white;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+        td,
+        tr {
+            text-align: center;
+
+        }
+
+        li {
+            padding: 15px
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="font-size: 100px;text-align: center;">London</h1>
+    <div style="width: 100%;height: 620px;">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 5</div>
+                <img src="https://london.com/wp-content/uploads/2019/03/london_001.jpg" style="width:100%;">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 5</div>
+                <img src="https://content.r9cdn.net/rimg/dimg/8a/d8/29dcb2f0-city-28501-17579c53c1d.jpg?width=1200&height=630&crop=true"
+                    style="width: 100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 5</div>
+                <img src="https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1643926658/yw8hhtxaeto86pk3tpqg.jpg"
+                    style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 5</div>
+                <img src="https://media.istockphoto.com/id/1284903727/photo/panoramic-view-to-the-skyline-of-london-united-kingdom-during-sunset-time.jpg?s=612x612&w=0&k=20&c=VNGCcvJKTlgfhhIALXl08zJyrsPGU4mcx86u69tEMzw="
+                    style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <img src="https://www.lboro.ac.uk/media/wwwlboroacuk/external/content/mediacentre/pressreleases/2022/05/londontown.jpg"
+                    style="width:100%">
+            </div>
+        </div>
+
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <script>
+            let slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                setTimeout(showSlides, 3000);
+            }
+        </script>
+    </div>
+    <div style="width: 100%;font-size: 25px;text-align: center;">
+        <p>
+            London is the capital city of England and is one of the most popular tourist destinations in the world. It
+            is a vibrant and diverse city that has something for everyone, from historic landmarks and museums to modern
+            art galleries and trendy shopping districts.
+
+            One of the most iconic landmarks in London is the Tower Bridge, which spans the River Thames and offers
+            stunning views of the city. Other must-see attractions include the Tower of London, which is home to the
+            Crown Jewels, and Buckingham Palace, the official residence of the British monarch.
+
+            For history enthusiasts, London is also home to several world-renowned museums, including the British
+            Museum, the National Gallery, and the Victoria and Albert Museum. These museums house collections of art and
+            artifacts from around the world, spanning thousands of years of human history.
+
+            London is also known for its diverse neighborhoods, each with its own unique character and culture. From the
+            trendy streets of Shoreditch to the historic charm of Notting Hill, there is always something new to
+            discover in London.
+
+            Foodies will also find plenty to love in London, with a wide range of restaurants and cafes serving
+            everything from traditional British pub fare to international cuisine. The city is also home to several food
+            markets, including Borough Market and Camden Market, where visitors can sample a variety of delicious foods
+            and drinks.
+
+            Overall, London is a vibrant and exciting city that offers a wealth of cultural, historical, and culinary
+            experiences for visitors to explore and enjoy.
+            <br><br><br>
+        </p>
+    </div>
+    <div style="padding: 20px;width: 100%;font-size: 20px;text-align: center;">
+        <p style="font-size: 50px;">Some of most popular places in London<br></p>
+        <table>
+            <tr>
+                <td style="padding-left: 20px;padding-top: 20px;padding-right: 20px;"><img
+                        src="https://worldstrides.com/wp-content/uploads/2015/07/api201.jpg" width="300px"
+                        height="300px"></td>
+                <td style="padding-left: 20px;padding-top: 20px;padding-right: 20px;"><img
+                        src="https://lp-cms-production.imgix.net/2021-04/shutterstockRF_457813381.jpg" width="300px"
+                        height="300px"></td>
+                <td style="padding-left: 20px;padding-top: 20px;padding-right: 20px;"><img
+                        src="https://www.ytravelblog.com/wp-content/uploads/2022/05/the-london-eye-england-15.jpg"
+                        width="300px" height="300px"></td>
+                <td style="padding-left: 20px;padding-top: 20px;padding-right: 20px;"><img
+                        src="https://planetofhotels.com/guide/sites/default/files/styles/node__blog_post__bp_banner/public/hero_banner/big-ben_1.jpg"
+                        width="300px" height="300px"></td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Tower of London</p>
+                </td>
+                <td>
+                    <p>Bukingham Palace</p>
+                </td>
+                <td>
+                    <p>London Eye</p>
+                </td>
+                <td>
+                    <p>Big Ben</p>
+                </td>
+            </tr>
+
+        </table>
+        <br><br>
+        <table>
+            <tr>
+                <td style="padding-left: 20px;padding-top: 20px;padding-right: 20px;width: 300px;height: 300px;"></td>
+                <td style="padding-left: 20px;padding-top: 20px;padding-right: 20px;"><img
+                        src="https://cdn-imgix.headout.com/tour/30319/TOUR-IMAGE/22615f37-d645-4403-8d50-3a2bf6736c3b-1act-53ea89ff-b4ec-49fd-afde-4fcf56b0db5b.jpg"
+                        width="300px" height="300px"></td>
+                <td style="padding-left: 20px;padding-top: 20px;padding-right: 20px;"><img
+                        src="https://www.hastingsinternational.com/images/tower-bridge.jpg" width="300px"
+                        height="300px"></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <p>British Museum</p>
+                </td>
+                <td>
+                    <p>Tower Bridge</p>
+                </td>
+
+            </tr>
+
+        </table>
+    </div>
+    <div style="font-size: 25px;height: 500px;background-color: rgb(194, 210, 165);width: 1200px;margin-left: 100px;">
+        <p style="font-size: 50px;margin-left: 40px;"><br>Places you can stay..</p>
+        <div style="float: left;padding-left: 40px;padding-right: 40px;">
+            <ul>
+                <li>The Ritz London</li>
+                <li>The Savoy</li>
+                <li>The Langham</li>
+                <li>The Shangri-La Hotel at The Shard</li>
+
+            </ul>
+        </div>
+        <div style="float: left;padding-left: 40px;">
+            <ul>
+                <li>The Dorchester</li>
+                <li>The Mandarin Oriental Hyde Park</li>
+                <li>The Rosewood London</li>
+
+            </ul>
+        </div>
+
+    </div>
+
+    <div style="font-size: 20px;padding: 50px;">
+        <p style="font-size: 45px;">Certainly, here are some tips for traveling to New York:</p>
+        <ul>
+            <li>Plan ahead: London is a large and diverse city with plenty to see and do. Plan your trip in advance to
+                make the most of your time there. Research the attractions and activities that interest you and plan out
+                your itinerary accordingly.</li>
+
+            <li>Choose the right time to travel: London can be visited year-round, but different seasons can offer
+                different experiences. If you're looking to avoid crowds and enjoy milder weather, consider visiting in
+                the spring or fall. However, if you want to experience London's festive holiday season, consider
+                traveling during November and December.</li>
+
+            <li>Book accommodation in advance: London is a popular tourist destination, and hotels and other
+                accommodations can fill up quickly. Book your accommodation in advance to avoid disappointment and
+                secure a good deal.</li>
+
+            <li>Use public transportation: London has an extensive public transportation system that includes the famous
+                Underground (Tube) system, buses, and trains. Using public transportation is an affordable and efficient
+                way to get around the city.</li>
+
+            <li>Get a London Pass: If you plan on visiting multiple attractions in London, consider getting a London
+                Pass. This pass offers discounted admission to many of the city's top attractions and can help you save
+                money.</li>
+
+            <li>Be prepared for the weather: London weather can be unpredictable, so it's best to be prepared for all
+                possibilities. Bring a raincoat or umbrella, and comfortable shoes for walking.</li>
+
+            <li>Explore different neighborhoods: London is made up of many diverse neighborhoods, each with its own
+                unique character and attractions. Don't just stick to the tourist hotspots - explore neighborhoods like
+                Shoreditch, Camden, or Notting Hill for a different perspective of the city.</li>
+
+            <li>Try the local cuisine: London has a diverse food scene, with everything from traditional British pub
+                fare to international cuisine from around the world. Be sure to try some local favorites like fish and
+                chips, Sunday roast, or a classic afternoon tea.</li>
+
+            <li>Take advantage of free attractions: London has many free attractions, such as the British Museum, the
+                National Gallery, and the Tate Modern. These attractions are not only budget-friendly, but also offer a
+                wealth of cultural and historical experiences.</li>
+
+            <li>Be mindful of cultural differences: London is a multicultural city with a diverse population, so be
+                respectful of cultural differences and norms. Learn a few key phrases in the local language, and be
+                aware of local customs and etiquette.</li>
+
+        </ul>
+
+    </div>
+    <p style="font-size: 20px;"><a href="file:///C:/Users/hp/Desktop/Project/Project/Project_P1.html">Go
+            Back to Homepage...</a></p>
+</body>
+
+</html>
